@@ -349,9 +349,10 @@ section {
     margin: 0;
 }
 .workCards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
     margin: 1rem 0 0 0;
     gap: 1.5rem;
 }
@@ -365,7 +366,6 @@ section {
     border: 2px solid transparent;
     transition: border 0.2s ease-in-out;
     border: 2px solid var(--light-grey);
-    width: min(100%, 300px);
 }
 .workCard:hover {
     border: 2px solid var(--light-blue);
@@ -476,10 +476,18 @@ footer {
     .aboutCardCV {
         width: 100%;
     }
-    .workCard {
-        width: 100%;
+    .workCards {
+        grid-template-columns: 1fr 1fr;
     }
 }
+
+/* mobile size screen query */
+@media (orientation:portrait) and (max-width: 550px) {
+    .workCards {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* no hover */
 @media (hover: none) {
     .navlink:hover {

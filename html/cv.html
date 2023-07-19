@@ -26,10 +26,10 @@
         <a id="github" class="navLink" href="https://github.com/Matt54633" target="_blank"><img class="navImage"
                 src="/images/github.svg" alt="GitHub Logo" width="25" height="25"></a>
     </nav>
-    <section id="hero" class="cvHero">
-        <div class="heroContainer heroContainerCV">
+    <section id="hero">
+        <div class="heroContainer">
             <div class="heroTextContainer flex row">
-                <p class="heroTitle">CV</p>
+                <p class="heroTitle" style="margin-bottom: 1rem;">CV</p>
             </div>
             <div class="flex row">
                 <a href="/files/CV.pdf" target="_blank"><button class="heroButton button">Download my CV<span class="rightArrow">→</span></button></a>
@@ -182,13 +182,13 @@
             <br><br>
             At the weekend, I proudly support my local team, attending home and away games and have a passion for cooking and graphic design. As a former Scout, I enjoy volunteering in the community and exploring new places.</p>
     </section>
-    <footer class="footerCV flex row">
+    <footer class="flex row">
         <p class="footerText">&copy; Matt Sullivan</p>
         <a class="footerLink" target="_blank"
             href="https://www.privacypolicies.com/live/92a704fb-cf22-45ad-9660-59fbfac3cda9">Privacy Policy</a>
     </footer>
     <script>
-        let copyright = document.querySelector(".footerText");
+        const copyright = document.querySelector(".footerText");
         copyright.innerHTML = "©Matt Sullivan - " + new Date().getFullYear();
     </script>
 </body>

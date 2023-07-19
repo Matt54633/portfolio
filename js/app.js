@@ -18,12 +18,13 @@ window.addEventListener("scroll", function () {
   menuScroll();
 });
 
-let menuHome = document.getElementById("menuHome");
-let menuAbout = document.getElementById("menuAbout");
-let menuExperience = document.getElementById("menuExperience");
-let menuWork = document.getElementById("menuWork");
-let menuContact = document.getElementById("menuContact");
-let menuItems = [menuHome, menuAbout, menuExperience, menuWork, menuContact];
+const menuHome = document.getElementById("menuHome");
+const menuAbout = document.getElementById("menuAbout");
+const menuExperience = document.getElementById("menuExperience");
+const menuWork = document.getElementById("menuWork");
+const menuContact = document.getElementById("menuContact");
+const menuItems = [menuHome, menuAbout, menuExperience, menuWork, menuContact];
+
 // set active menu item
 function activeMenuItem(menuItem) {
   menuItem.classList.add("active");
@@ -44,16 +45,16 @@ menuItems.forEach(function (menuItem) {
 });
 // set active based on scroll position
 function menuScroll() {
-  let hero = document.getElementById("hero");
-  let heroHeight = hero.offsetHeight;
-  let about = document.getElementById("aboutMe");
-  let aboutHeight = about.offsetHeight;
-  let experience = document.getElementById("experience");
-  let experienceHeight = experience.offsetHeight;
-  let work = document.getElementById("work");
-  let workHeight = work.offsetHeight;
-  let contact = document.getElementById("contact");
-  let contactHeight = contact.offsetHeight;
+  const hero = document.getElementById("hero");
+  const heroHeight = hero.offsetHeight;
+  const about = document.getElementById("aboutMe");
+  const aboutHeight = about.offsetHeight;
+  const experience = document.getElementById("experience");
+  const experienceHeight = experience.offsetHeight;
+  const work = document.getElementById("work");
+  const workHeight = work.offsetHeight;
+  const contact = document.getElementById("contact");
+  const contactHeight = contact.offsetHeight;
 
   let scrollPosition = window.scrollY;
   if (scrollPosition < heroHeight) {
@@ -62,18 +63,12 @@ function menuScroll() {
     activeMenuItem(menuAbout);
   } else if (scrollPosition < heroHeight + aboutHeight + experienceHeight) {
     activeMenuItem(menuExperience);
-  } else if (
-    scrollPosition <
-    heroHeight + aboutHeight + experienceHeight + workHeight
-  ) {
+  } else if (scrollPosition < heroHeight + aboutHeight + experienceHeight + workHeight) {
     activeMenuItem(menuWork);
-  } else if (
-    scrollPosition <
-    heroHeight + aboutHeight + experienceHeight + workHeight + contactHeight
-  ) {
+  } else if (scrollPosition < heroHeight + aboutHeight + experienceHeight + workHeight + contactHeight) {
     activeMenuItem(menuContact);
   }
 }
 // copyright
-let copyright = document.querySelector(".footerText");
+const copyright = document.querySelector(".footerText");
 copyright.innerHTML = "©Matt Sullivan - " + new Date().getFullYear();

@@ -254,6 +254,9 @@ section {
     transition: border 0.2s ease-in-out;
     width: 100%;
 }
+#soloAboutCard {
+    grid-column: span 2;
+}
 .aboutCardCV {
     flex-direction: column;
     align-items: flex-start;

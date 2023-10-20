@@ -2,6 +2,11 @@
     box-sizing: border-box;
     font-family: 'Satoshi', sans-serif;
 }
+
+a:visited .skillTag {
+    border: var(--glass-grey);
+}
+
 :root {
     --small-font-size: clamp(0.6rem, 0.8vw + 0.8rem, 1rem);
     --nav-font-size: clamp(1rem, 1vw + 1rem, 1.3rem);
@@ -304,7 +309,7 @@ section {
     margin: 1.75rem 0 0 0;
 }
 .skillTag {
-    border: 2px solid var(--glass-grey);
+    border: 2px solid var(--light-grey);
     border-radius: 1rem;
     background: var(--medium-grey);
     backdrop-filter: blur(12px);
